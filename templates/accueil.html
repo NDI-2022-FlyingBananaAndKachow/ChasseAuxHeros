@@ -2,10 +2,54 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Title</title>
+	<title>SexInfo</title>
 	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
 </head>
 <body>
-	<h1>Page d'accueil</h1>
+	<h1 style="text-align: center">SexInfo<br/>La prévention par le jeu</h1>
+
+	<hr/>
+
+	<nav>
+		<ul>
+			<li>
+				Accueil
+			</li>
+			<li>
+				Levels
+				<ul>
+					<li>
+						Level 1
+					</li>
+					<li>
+						Level 2
+					</li>
+					<li>
+						Level 3
+					</li>
+				</ul>
+			</li>
+			<li>
+				Résultats
+			</li>
+		</ul>
+	</nav>
+
+	<pre style="font-size:15px;">
+		<div style="text-align: center">
+			Dans le cadre de la Nuit de l'info 2022 qui marque notamment la 34ème journée mondiale de lutte contre le SIDA (tous les 1/12)
+			nous avons réalisé un jeu visant à éduquer les jeunes générations afin de les aider à prendre en main leur sexualité de façon
+			décomplexée et d'ainsi contribuer à la lutte contre les préjugés et les IST.
+		</div>
+
+		<div style="text-align: center">
+			<img src="{{ url_for('static', filename='assets/astley.jpg') }}" alt="image de rick">
+		</div>
+
+		<div style="text-align: center">
+			Ce projet vous est présenté par les équipes Flying Banana et Kachow.
+		</div>
+	</pre>
+
 </body>
 </html>
