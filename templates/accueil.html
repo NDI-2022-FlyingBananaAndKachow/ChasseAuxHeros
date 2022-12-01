@@ -19,15 +19,11 @@
 			<li>
 				Levels
 				<ul>
+					{% for i in range(1, 4) %}
 					<li>
-						Level 1
+						<a href="/levels/{{ i }}">Level {{ i }}</a>
 					</li>
-					<li>
-						Level 2
-					</li>
-					<li>
-						Level 3
-					</li>
+					{% endfor %}
 				</ul>
 			</li>
 			<li>

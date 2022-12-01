@@ -7,7 +7,7 @@ app = Flask(__name__, template_folder="templates/", static_folder='static/')
 
 
 # Sert à tester si le numéro de map est valide
-is_map_valid = lambda map_id: 0 < map_id < 3
+is_map_valid = lambda map_id: 0 < map_id < 4
 is_question_valid = lambda question_id: 0 < question_id < 10
 
 
@@ -49,7 +49,7 @@ def reponse(level_id: int, question_id: int):
 	"""
 	Contient et renvoie la réponse à la question demandée.
 	:param level_id: Prend l'ID du niveau (de 1 à 3)
-	:param question_id: Prend l'ID de la question (0 à 9).
+	:param question_id: Prend l'ID de la question (0 à 5).
 	"""
 	if is_map_valid(level_id) and is_question_valid(question_id):
 		return render_template("reponse.html", level_id=level_id, question_id=question_id)
