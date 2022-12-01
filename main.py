@@ -8,7 +8,7 @@ app = Flask(__name__, template_folder="templates/", static_folder='static/')
 
 # Sert à tester si le numéro de map est valide
 is_map_valid = lambda map_id: 0 < map_id < 4
-is_question_valid = lambda question_id: 0 < question_id < 10
+is_question_valid = lambda question_id: 0 < question_id < 6
 
 
 @app.route('/')
