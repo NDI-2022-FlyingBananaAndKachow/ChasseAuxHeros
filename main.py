@@ -6,7 +6,7 @@ app = Flask(__name__, template_folder="templates/", static_folder='static/')
 
 @app.route('/')
 def index():
-	return "Hello world!"
+	return "Hello world! and easy win !!!!!!!!!!"
 
 
 if __name__ == '__main__':
