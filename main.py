@@ -59,6 +59,8 @@ def reponse(level_id: int, question_id: int):
 		return render_template("reponse.html", level_id=level_id, question_id=question_id)
 	else:
 		abort(403)
+
+
 @app.route('/easter_eggs_random_1021455455155151')
 def easter_eggs():
 	return 'FPD'
