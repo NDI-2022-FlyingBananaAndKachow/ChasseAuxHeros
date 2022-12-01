@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, abort
+from flask import Flask, render_template, request, abort, redirect
 
 from markupsafe import escape
 
@@ -25,7 +25,11 @@ def level(level_id: int):
 	Contient et renvoie les maps et niveaux.
 	:param level_id: Prend le l'ID du niveau (de 1 à 3).
 	"""
-	if is_map_valid(level_id):
+	if is_map_valid(level_id) or level_id == 4:
+		if level_id == 3:
+			redirect("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+		if level_id > 3:
+			level_id -= 1
 		return render_template("level.html", level_id=level_id)
 	else:
 		abort(403)
