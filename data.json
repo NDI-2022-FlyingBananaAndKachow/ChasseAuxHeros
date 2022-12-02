@@ -56,26 +56,63 @@
       "after_answer_message": "Vous pouvez faire un test de dépistage du VIH dans un laboratoire d’analyses biologiques, dans un CEGIDD (Centre Gratuit d’information, de Dépistage et de Diagnostic des infections par les virus de l’immunodéficience humaine, des hépatites virales et des infections sexuellement transmissible), dans des locaux associatifs ou des dispositifs mobiles habilités (TROD), et où vous voulez avec un autotest du VIH."
     }
   ],
-  "2": {
-    "q1": "qestion1?",
-    "r1": "reponse1",
-    "q2": "qestion2?",
-    "r2": "reponse2",
-    "q3": "qestion3?",
-    "r3": "reponse3",
-    "q4": "qestion4?",
-    "r4": "reponse4",
-    "q5": "qestion5?",
-    "r5": "reponse5",
-    "q6": "qestion6?",
-    "r6": "reponse6",
-    "q7": "qestion7?",
-    "r7": "reponse7",
-    "q8": "qestion8?",
-    "r8": "reponse8",
-    "q9": "qestion9?",
-    "r9": "reponse9"
-  },
+  "2": [
+    {
+      "question": "Quels sont les symptômes de la contamination ?",
+      "answers": [
+        "Il n’y a pas de symptômes",
+        "Il peut y avoir des symptômes similaires à la grippe",
+        "Il peut y avoir des irritations cutanées",
+        "Ça peut provoquer une perte des cheveux"
+      ],
+      "correct_answer": 1,
+      "after_answer_message": "Il est impossible de se baser sur des symptômes pour affirmer que quelqu’un a le VIH.\nToutefois, 50 % ou plus des personnes vivant avec le VIH peuvent manifester de légers symptômes semblables à ceux de la grippe, 2 à 4 semaines après avoir été infectées. Les premiers symptômes peuvent comprendre :\n●\tde la \tfièvre \t\n \t\n●\tune \tfatigue \t\n \t\n●\tdes \tfrissons \t\n \t\n●\tun \tmal de gorge \t\n \t\n●\tdes \tmaux de tête \t\n \t\n●\tdes \tdouleurs articulaires \t\n \t\n●\tdes \tdouleurs musculaires \t\n \t\n●\tl'enflure de glandes (ganglions lymphatiques) \t\n\nCe n'est qu'après un test de dépistage du VIH positif qu'on pourra établir si des symptômes sont dûs  à une contamination par le VIH.\n"
+    },
+    {
+      "question": "4 idées fausses sur le SIDA",
+      "answers": [
+        "Le SIDA on n’en guérit pas",
+        "Le SIDA, on n’en meurt plus",
+        "La pilule protège du SIDA",
+        "Le premier rapport sexuel protège du SIDA"
+      ],
+      "correct_answer": 0,
+      "after_answer_message": "<b>Le SIDA on n’en guérit pas</b>\nMême si des trithérapies performantes existent depuis 1996, on ne guérit toujours pas du SIDA. Les trithérapies permettent de \"mieux vivre\" avec le virus mais celui-ci reste toujours présent dans l'organisme. Une infection par le VIH s'évite en utilisant un moyen de prévention adapté à ses pratiques.\n<b>Le SIDA, on n’en meurt plus</b>\nDans le monde, 770 000 personnes sont décédées de maladies liées au sida en 2018.\n<b>La pilule protège du SIDA</b>\nLa pilule est un moyen contraceptif. Elle permet d’éviter une grossesse mais ne peut rien contre la transmission du VIH dans l'organisme lors d’un rapport sexuel non protégé.\n<b>Le premier rapport sexuel protège du SIDA</b>\nAvec un ou une partenaire inconnu-e, même s’il s’agit de votre premier rapport sexuel, il est important de se protéger en utilisant par exemple un préservatif."
+    },
+    {
+      "question": "Quel est le coût d’un test de dépistage ?",
+      "answers": [
+        "Ils sont toujours gratuit",
+        "Ils peuvent être gratuit ou coûter jusqu’à 30€",
+        "Entre 4€ et 16€ selon les tests",
+        "Environ 120€ mais payable en nature (si négatif)"
+      ],
+      "correct_answer": 1,
+      "after_answer_message": "Un test de dépistage du VIH est gratuit s'il est réalisé dans un CEGIDD (Centre Gratuit d’information, de Dépistage et de Diagnostic des infections par les virus de l’immunodéficience humaine, des hépatites virales et des infections sexuellement transmissible).\nUn test peut également être réalisé dans un laboratoire d'analyses médicales. Dans ce cas, il faut se munir d'une prescription médicale si on veut être remboursé à 100% par la CPAM. La consultation médicale est remboursée à 65%.\nSans ordonnance il est possible de faire un test mais il ne sera pas remboursé. Son coût varie entre 17 et 25€ selon les laboratoires en France métropolitaine.\nPour les auto-tests, Le prix d'Autotest VIH® varie de 18 à 30 € environ selon les lieux de vente. Le prix d'Exacto® tourne autour de 10 €."
+    },
+    {
+      "question": "Comment se transmet le VIH ? (Trouver la réponse fausse)",
+      "answers": [
+        "Lors d’une piqûre par un moustique",
+        "Lors de rapports sexuels non protégés par un préservatif (externe ou interne) avec pénétration vaginale et/ou pénétration anale",
+        "De la mère à l’enfant au cours de la grossesse ou de l’allaitement.",
+        "Par voie sanguine lors de partage du matériel d’injection en cas d’usage de drogues injectables, d’échanges de paille pour sniffer et en cas de piqûre accidentelle avec du matériel de soins contaminé pour les professionnels de la santé (Accident d'Exposition au Sang)"
+      ],
+      "correct_answer": 0,
+      "after_answer_message": "En effet, une piqûre de moustique ne transmet pas le VIH, mais des rapports non protégés, un allaitement, ou le partage de matériel médical non stérilisé le peut."
+    },
+    {
+      "question": "Je viens d’être exposé-e à un risque VIH, que dois-je faire ?",
+      "answers": [
+        "Je surveille l’apparition d’éventuels symptômes",
+        "Je me rends le plus rapidement possible au service des urgences d’un hôpital",
+        "Je prends un remède de grand-mère (écraser le manioc avec une presse manuelle  pour obtenir son jus, malaxer ou triturer quelques feuilles du jatropha dans de l’eau  pour obtenir son jus, faire le mélange des deux solutés.)",
+        "Je fais un test le lendemain"
+      ],
+      "correct_answer": 1,
+      "after_answer_message": "Rendez-vous au service des urgences d’un hôpital le plus rapidement possible, de préférence dans les 4 premières heures, au plus tard dans les 48 heures. un traitement post-exposition (TPE) peut empêcher une contamination. À l’accueil, dites que vous venez pour un traitement post-exposition au VIH. Un médecin vous recevra afin d’évaluer le risque. Il prescrira un TPE en cas de risque majeur."
+    }
+  ],
   "3": {
     "q1": "qestion1?",
     "r1": "reponse1",
