@@ -157,5 +157,6 @@
       ],
       "correct_answer": 0,
       "after_answer_message": "\nSur les résultats d'un test de dépistage du VIH, figure souvent un chiffre / index / indice qui n'est pas égal à 0. Il s'agit d'un index purement technique, un indice de densité optique pour être plus précis. Le résultat n'est jamais égal à 0 puisque nous avons tous des anticorps (autres que des anticorps anti-VIH). Il y a donc toujours un \"bruit de fond\".\nSi le résultat est :\n●\tégal \tou supérieur à 1 : le résultat (test ELISA) est positif mais une \t2ème analyse doit être pratiquée sur le même prélèvement \t(Western Blot) ; \t\n \t\n●\tinférieur \tà 0,708 : il est négatif. On n'a donc pas trouvé de trace du VIH \tdans l'analyse ; \t\n \t\n●\tcompris entre 0,708 et 0,999 : \til est dit \"douteux\" (ou équivoque) et doit être \tcontrôlé par une nouvelle sérologie réalisée 1 semaine plus \ttard. \t\n\n"
-    },
     }
+  ]
+}

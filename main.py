@@ -14,7 +14,6 @@ with open("data.json", "r", encoding="utf-8") as f:
 
 # Sert à tester si le numéro de map est valide
 is_map_valid = lambda map_id: 0 < map_id < 5
-is_question_valid = lambda question_id: 0 <= question_id < 5
 
 
 @app.route('/')
@@ -48,7 +47,7 @@ def question(level_id: int, question_id: int, failed: bool = False):
 	:param level_id: Prend l'ID du niveau (de 1 à 3)
 	:param question_id: Prend l'ID de la question (0 à 9).
 	"""
-	if is_map_valid(level_id) and is_question_valid(question_id):
+	if is_map_valid(level_id) and 0 <= question_id <= len(data[str(level_id)]):
 		# On récupère la question
 		question = data[str(level_id)][question_id]["question"]
 
@@ -80,7 +79,7 @@ def reponse(level_id: int, question_id: int):
 	:param level_id: Prend l'ID du niveau (de 1 à 3)
 	:param question_id: Prend l'ID de la question (0 à 5).
 	"""
-	if is_map_valid(level_id) and is_question_valid(question_id):
+	if is_map_valid(level_id) and 0 <= question_id <= len(data[str(level_id)]):
 		# On récupère le texte après-réponse
 		after_answer_text = data[str(level_id)][question_id]["after_answer_message"]
 
@@ -108,7 +107,7 @@ def resultat(level_id: int, question_id: int, answer_id: int):
 	:param question_id: Prend l'ID de la question (0 à 9).
 	:param answer_id: Prend l'ID de la réponse en paramètre.
 	"""
-	if is_map_valid(level_id) and is_question_valid(question_id):
+	if is_map_valid(level_id) and 0 <= question_id <= len(data[str(level_id)]):
 		# Récupère la question
 		question_var = data[str(level_id)][question_id]
 
