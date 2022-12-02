@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, abort, redirect
 import json
+from random import shuffle
 
 from markupsafe import escape
 
@@ -54,6 +55,10 @@ def question(level_id: int, question_id: int, failed: bool = False):
 		# On récupère chaque la liste des réponses
 		answers = data[str(level_id)][question_id]["answers"]
 
+		# Crée une portée aléatoire d'IDs de réponses
+		answer_ids = [i for i in range(4)]
+		shuffle(answer_ids)
+
 		# Fait le rendu du template
 		return render_template(
 			"question.html",
@@ -61,7 +66,8 @@ def question(level_id: int, question_id: int, failed: bool = False):
 			question_id=question_id,
 			question=question,
 			answers=answers,
-			failed=failed
+			failed=failed,
+			answer_ids=answer_ids
 		)
 	else:
 		abort(403)
