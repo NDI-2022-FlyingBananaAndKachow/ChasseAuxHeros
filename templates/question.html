@@ -14,10 +14,11 @@
                     <legend>Question : {{ question }}</legend>
 	                {% for i in range(4) %}
                     <div>
-                        <input type="radio" id="id{{i}}" name="Option {{i}}">
-                        <label for="Option {{i}}">{{answers[i]}}</label>
+                        <input type="radio" id="Option{{i}}" name="Option {{i}}">
+                        <label for="Option{{i}}">{{answers[i]}}</label>
                     </div>
 	                {% endfor %}
+	                <input type="submit"/>
                 </div>
             </fieldset>
         </div>
