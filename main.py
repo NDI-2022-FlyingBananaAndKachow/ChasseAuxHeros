@@ -102,7 +102,7 @@ def resultat(level_id: int, question_id: int, answer_id: int):
 	:param question_id: Prend l'ID de la question (0 à 9).
 	:param answer_id: Prend l'ID de la réponse en paramètre.
 	"""
-	if is_map_valid(level_id) and is_map_valid(question_id):
+	if is_map_valid(level_id) and is_question_valid(question_id):
 		# Récupère la question
 		question_var = data[str(level_id)][question_id]
 
