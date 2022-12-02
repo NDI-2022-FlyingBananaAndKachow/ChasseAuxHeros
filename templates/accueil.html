@@ -8,47 +8,24 @@
     <script defer src="{{ url_for('static', filename='easterEgg.js') }}"></script>
 </head>
 <body>
-    <h1>SexInfo<a id="easterBtn">o</a></h1>
-    <h1>La prévention par le jeu</h1>
-
-    <hr/>
-
-
-    <nav>
-        <ul>
-            <li>
-                Accueil
-            </li>
-
-
-            <li>
-                Levels
-                <ul>
-                    {% for i in range(1, 5) %}
-                    <li>
-                        <a href="/levels/{{ i }}">Level {{ i }}</a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </li>
-        </ul>
-    </nav>
-
-    <pre style="font-size:15px;">
-		<div style="text-align: center">
-			Dans le cadre de la Nuit de l'info 2022 qui marque notamment la 34ème journée mondiale de lutte contre le SIDA (tous les 1/12)
-			nous avons réalisé un jeu visant à éduquer les jeunes générations afin de les aider à prendre en main leur sexualité de façon
-			décomplexée et d'ainsi contribuer à la lutte contre les préjugés et les IST.
+    <section id="home">
+		<img src="{{ url_for('static', filename='assets/vague.png') }}" class="vague1">
+		<header>
+			<a href="/" class="accueil">Accueil</a>
+			{% for i, name in ((0, "easy"), (1, "medium"), (2, "hardcore"), (3, "very hardcore")) %}
+			<a href="/levels/{{i+1}}" class="quiz">Quiz : {{name}} </a>
+			{% endfor %}
+		</header>
+		<div class="texte_entier" >
+			<h1 class="texteh1_home">SexInfo : La prévention par le jeu<a id="easterBtn">o</a></h1>
+			<div class="texteh2-home">
+				Dans le cadre de la Nuit de l'info 2022 qui marque notamment la 34ème journée mondiale de lutte contre le SIDA (tous les 1/12)
+				nous avons réalisé un jeu visant à éduquer les jeunes générations afin de les aider à prendre en main leur sexualité de façon
+				décomplexée et d'ainsi contribuer à la lutte contre les préjugés et les IST. <br><br>Ce projet vous est présenté par les équipes Flying Banana et Kachow.
+			</div>
 		</div>
 
-		<div style="text-align: center">
-			<img src="{{ url_for('static', filename='assets/astley.jpg') }}" alt="image de rick">
-		</div>
-
-		<div style="text-align: center">
-			Ce projet vous est présenté par les équipes Flying Banana et Kachow.
-		</div>
-	</pre>
+	</section>
 
 </body>
 

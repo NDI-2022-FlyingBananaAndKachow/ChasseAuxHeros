@@ -6,10 +6,9 @@ h1 {
     text-align: center;
 }
 
-h1:first_child::before {
+#easterBtn {
     content: 'o';
-    background-color: mediumpurple;
-    color: mediumpurple;
+    opacity: 0%;
     user-select: none;
 }
 
@@ -26,4 +25,129 @@ h1:nth-child(even) {
     color: mediumpurple;
     cursor: default;
     user-select: none;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Poppins:ital,wght@0,300;0,400;1,200&display=swap');
+html {
+    scroll-behavior: smooth;
+    cursor: default;
+    user-select: none;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+    color: #f6f6f6;
+    background: linear-gradient(270.11deg, #CA9CC3 -1.82%, #B47FAC 99.9%);
+    width: 100%;
+    overflow: hidden;
+
+    animation: bg 10s linear infinite;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 1550px;
+    height:800px ;
+
+    background-image :url('assets/fond_site.png');
+
+    position: relative;
+
+}
+
+section h1 {
+    text-align: left;
+
+    color: #f6f6f6;
+    font-size: 2em;
+}
+
+.fond_site{
+    width: 100%;
+    height: auto;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    min-height: 60px;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    padding-top: 2%;
+    position: relative;
+
+}
+
+
+
+a {
+    font-style: normal;
+    text-decoration: none;
+}
+
+header a {
+    padding: auto;
+    margin: auto;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    font-size: 1.2em;
+    color: #f6f6f6;
+    transition-duration: 250ms;
+}
+
+header a:hover {
+    color: #f8bcef;
+}
+
+.texteh1_home{
+
+    position: absolute;
+    width: 1682px;
+    height: 244px;
+    left: 51px;
+    top: 343px;
+    font-size: 40px;
+    color: #FFFFFF;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.texteh2-home{
+    position: absolute;
+width: 1200px;
+height: 294px;
+left: 55px;
+top: 475px;
+color: #FFFFFF;
+font-size: 20px;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.texte_entier{
+    position: absolute;
+width: 1682px;
+height: 426px;
+left: 51px;
+top: -70px;
+}
+
+.vague1{
+    position: absolute;
+    opacity: 100%;
+    z-index: 0;
+    width: 100%;
+    height: 800px;
+
+
+/* Note: backdrop-filter has minimal browser support */
+
+
 }
