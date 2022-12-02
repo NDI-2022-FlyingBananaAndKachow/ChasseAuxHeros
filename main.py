@@ -13,7 +13,7 @@ with open("data.json", "r", encoding="utf-8") as f:
 
 # Sert à tester si le numéro de map est valide
 is_map_valid = lambda map_id: 0 < map_id < 5
-is_question_valid = lambda question_id: 0 < question_id < 10
+is_question_valid = lambda question_id: 0 <= question_id < 5
 
 
 @app.route('/')
@@ -74,7 +74,16 @@ def reponse(level_id: int, question_id: int):
 	:param question_id: Prend l'ID de la question (0 à 5).
 	"""
 	if is_map_valid(level_id) and is_question_valid(question_id):
-		return render_template("reponse.html", level_id=level_id, question_id=question_id)
+		# On récupère le texte après-réponse
+		after_answer_text = data[str(level_id)][question_id]["after_answer_message"]
+
+		# Fait le rendu du template
+		return render_template(
+			"reponse.html",
+			level_id=level_id,
+			question_id=question_id,
+			reponse=after_answer_text
+		)
 	else:
 		abort(403)
 
