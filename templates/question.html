@@ -12,7 +12,7 @@
             <fieldset ID="{{  level_id  }}" style="width:30%;">
                 <div class="center">
                     <legend>Question : {{ question }}</legend>
-	                {% for i in range(4) %}
+	                {% for i in answer_ids %}
                     <div>
                         <input type="radio" id="Option{{i}}" name="Options">
                         <label for="Option{{i}}">{{answers[i]}}</label>
