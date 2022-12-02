@@ -2,15 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Title</title>
+	<title>Niveau {{ level_id }}</title>
 	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
 	<link rel="stylesheet" href="{{ url_for('static', filename='level.css') }}"/>
 	<script src="{{url_for('static', filename='script/level.js')}}"></script>
 </head>
 <body>
-	<div>
-		
-	</div>
 	<div id="levelContainer">
 		<img id="map" src="{{url_for('static', filename='assets/map.png')}}" alt="">
 		<img id="thor" src="{{url_for('static', filename='assets/thor.png')}}" alt="">
