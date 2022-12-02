@@ -6,6 +6,8 @@
 	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
 </head>
 <body>
-
+	{% for sentence in reponse.split('\n') %}
+	{{ sentence }}<br/>
+	{% endfor %}
 </body>
 </html>
