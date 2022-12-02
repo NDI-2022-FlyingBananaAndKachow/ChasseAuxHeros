@@ -1,24 +1,61 @@
 {
-  "1": {
-    "q1": "qestion1?",
-    "r1": "reponse1",
-     "q2": "qestion2?",
-    "r2": "reponse2",
-     "q3": "qestion3?",
-    "r3": "reponse3",
-     "q4": "qestion4?",
-    "r4": "reponse4",
-     "q5": "qestion5?",
-    "r5": "reponse5",
-     "q6": "qestion6?",
-    "r6": "reponse6",
-     "q7": "qestion7?",
-    "r7": "reponse7",
-     "q8": "qestion8?",
-    "r8": "reponse8",
-     "q9": "qestion9?",
-    "r9": "reponse9"
-  },
+  "1": [
+    {
+      "question": "Quand peut-on faire un test ?",
+      "answers": [
+        "N'importe quand",
+        "6 à 12 semaines après le risque",
+        "1 semaine après le risque",
+        "Il peut être fait préventivement"
+      ],
+      "correct_answer": 1,
+      "after_answer_message": "Le TROD (Test Rapide d’Orientation Diagnostique) est totalement fiable 3 mois après une prise de risque VIH. Il peut être effectué à n’importe quel moment, que l’on ait mangé ou pas.\nUn test « classique » (ELISA, par prise de sang) est fiable 6 semaines après le risque."
+    },
+    {
+      "question": "Quand peut-on faire un test ?",
+      "answers": [
+        "Il n’y a aucun risque",
+        "Seule la personne qui suce peut être contaminée",
+        "Seule la personne sucée peut être contaminée",
+        "Les 2 personnes peuvent être contaminées"
+      ],
+      "correct_answer": 1,
+      "after_answer_message": "On ne peut pas considérer que le fait de se faire sucer est une pratique à risque réel en dehors des pratiques collectives.\nCependant, faire une fellation à un homme porteur du VIH peut comporter un risque (faible) de transmission en cas de contact entre le sperme (ou le liquide pré-séminal) et la muqueuse de la bouche pour celui/celle qui suce.\nLa fellation est un mode de contamination pour d’autres Infections Sexuellement Transmissibles (comme la syphilis ou l’urétrite)."
+    },
+    {
+      "question": "Quels sont les risques d'une pénétration anale ?",
+      "answers": [
+        "Il n’y a aucun risque",
+        "Seule la personne qui pénètre peut être contaminée",
+        "Seule la personne pénétrée peut être contaminée",
+        "Les 2 personnes peuvent être contaminées"
+      ],
+      "correct_answer": 3,
+      "after_answer_message": "Le VIH peut être transmis aux 2 partenaires lors d'une pénétration anale non protégée par un préservatif si l’un des partenaires est porteur de ce virus. L’éjaculation dans l’anus augmente le risque de transmission du VIH pour la personne pénétrée. Si l’un des partenaires (ou les deux) est porteur d’une infection sexuellement transmissible (IST), le risque de transmission du VIH est plus important."
+    },
+    {
+      "question": "Quels sont les risques lors d’un cunnilingus ?",
+      "answers": [
+        "Il n’y a aucun risque",
+        "Seule la personne qui pénètre peut être contaminée",
+        "Seule la personne pénétrée peut être contaminée",
+        "Les 2 personnes peuvent être contaminées"
+      ],
+      "correct_answer": 0,
+      "after_answer_message": "Le cunnilingus n'est pas une pratique à risque pour le VIH.\nUne femme qui reçoit un cunnilingus ne peut pas être contaminée car la salive de son-sa partenaire ne transmet pas le VIH.\nUne personne qui fait un cunnilingus peut être contaminée par certaines IST comme la syphillis ou la blennorragie."
+    },
+    {
+      "question": "Où faire un test de dépistage ? (sélectionner la réponse fausse)",
+      "answers": [
+        "Dans un laboratoire avec ordonnance d’un médecin",
+        "Dans un club libertin",
+        "Avec un autotest acheté en pharmacie",
+        "Après d’une association agrémentée"
+      ],
+      "correct_answer": 1,
+      "after_answer_message": "Vous pouvez faire un test de dépistage du VIH dans un laboratoire d’analyses biologiques, dans un CEGIDD (Centre Gratuit d’information, de Dépistage et de Diagnostic des infections par les virus de l’immunodéficience humaine, des hépatites virales et des infections sexuellement transmissible), dans des locaux associatifs ou des dispositifs mobiles habilités (TROD), et où vous voulez avec un autotest du VIH."
+    }
+  ],
   "2": {
     "q1": "qestion1?",
     "r1": "reponse1",
