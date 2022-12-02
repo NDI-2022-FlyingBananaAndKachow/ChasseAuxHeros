@@ -8,6 +8,12 @@
 	<script src="{{url_for('static', filename='script/level.js')}}"></script>
 </head>
 <body>
+	<header>
+		<a href="/" class="accueil">Accueil</a>
+		{% for i, name in ((0, "easy"), (1, "medium"), (2, "hardcore"), (3, "very hardcore")) %}
+		<a href="/levels/{{i+1}}" class="quiz">Quiz : {{name}} </a>
+		{% endfor %}
+	</header>
 	<div id="levelContainer">
 		<img id="map" src="{{url_for('static', filename='assets/map.png')}}" alt="">
 		<img id="thor" src="{{url_for('static', filename='assets/thor.png')}}" alt="">
