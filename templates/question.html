@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
 </head>
 <body>
-	<form method="post" action="/resultat/{{ level_id  }}/{{  question_id  }}">
+	<form method="post" action="/resultat/{{ level_id  }}/{{ question_id }}">
         <div class="centered-div">
             <br>
             <fieldset ID="{{  level_id  }}" style="width:30%;">
@@ -14,14 +14,30 @@
                     <legend>Question : {{ question }}</legend>
 	                {% for i in range(4) %}
                     <div>
-                        <input type="radio" id="Option{{i}}" name="Option {{i}}">
+                        <input type="radio" id="Option{{i}}" name="Options">
                         <label for="Option{{i}}">{{answers[i]}}</label>
                     </div>
 	                {% endfor %}
-	                <input type="submit"/>
+	                {% if failed %}
+	                <div style="color: rgb(150, 0, 40)">
+		                Ce n'est pas la bonne réponse.
+	                </div>
+	                {% endif %}
+	                <button type="button" id="submitBtn">Valider</button>
                 </div>
             </fieldset>
         </div>
     </form>
+
+	<script>
+		const easterBtn = document.querySelector("#submitBtn");
+
+		easterBtn.addEventListener("click", () => {
+		    window.location.replace(
+                "/resultat/{{ level_id  }}/{{ question_id }}/" +
+			    document.querySelector('input[name="Options"]:checked').id.replace("Option", "")
+		    );
+		});
+	</script>
 </body>
 </html>

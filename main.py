@@ -41,7 +41,7 @@ def level(level_id: int):
 
 
 @app.route('/questions/<int:level_id>/<int:question_id>')
-def question(level_id: int, question_id: int):
+def question(level_id: int, question_id: int, failed: bool = False):
 	"""
 	Contient et renvoie la question demandée.
 	:param level_id: Prend l'ID du niveau (de 1 à 3)
@@ -60,7 +60,8 @@ def question(level_id: int, question_id: int):
 			level_id=level_id,
 			question_id=question_id,
 			question=question,
-			answers=answers
+			answers=answers,
+			failed=failed
 		)
 	else:
 		abort(403)
@@ -90,17 +91,36 @@ def reponse(level_id: int, question_id: int):
 
 @app.route('/easter_eggs_random_1021455455155151')
 def easter_eggs():
-	return 'FPD'
+	return 'FDP'
 
 
-@app.post('/resultat/<int:level_id>/<int:question_id>')
-def resultat(level_id: int, question_id: int):
+@app.route('/resultat/<int:level_id>/<int:question_id>/<int:answer_id>')
+def resultat(level_id: int, question_id: int, answer_id: int):
 	"""
 	Contient et renvoie la réponse à la question demandée.
 	:param level_id: Prend l'ID du niveau (de 1 à 3)
 	:param question_id: Prend l'ID de la question (0 à 9).
+	:param answer_id: Prend l'ID de la réponse en paramètre.
 	"""
-	pass
+	if is_map_valid(level_id) and is_map_valid(question_id):
+		# Récupère la question
+		question_var = data[str(level_id)][question_id]
+
+		# Récupère la question correcte
+		valid_answer_id = question_var["correct_answer"]
+
+		# Si la réponse est correcte, on renvoie vers la page de résultat
+		if answer_id == valid_answer_id:
+			return render_template(
+				"reponse.html",
+				level_id=level_id,
+				question_id=question_id,
+				reponse=question_var["after_answer_message"]
+			)
+		else:
+			return question(level_id, question_id, True)
+	else:
+		abort(403)
 
 
 if __name__ == '__main__':
