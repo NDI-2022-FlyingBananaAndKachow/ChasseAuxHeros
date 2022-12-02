@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Title</title>
+	<title>Question {{ question_id }} du niveau {{ level_id }}</title>
 	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
 </head>
 <body>
@@ -13,7 +13,7 @@
                 <div class="center">
                     <legend>Question : {{ question }}</legend>
 	                {% for i in answer_ids %}
-                    <div>
+                    <div class="reponse">
                         <input type="radio" id="Option{{i}}" name="Options">
                         <label for="Option{{i}}">{{answers[i]}}</label>
                     </div>
@@ -23,7 +23,7 @@
 		                Ce n'est pas la bonne réponse.
 	                </div>
 	                {% endif %}
-	                <button type="button" id="submitBtn">Valider</button>
+	                <button type="button" id="submitBtn" class="bouton">Valider</button>
                 </div>
             </fieldset>
         </div>
