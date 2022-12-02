@@ -6,15 +6,20 @@
     <title>SexInfo</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
     <script defer src="{{ url_for('static', filename='script/easterEgg.js') }}"></script>
+	<script defer src="{{ url_for('static', filename='script/englishVersion.js') }}"></script>
 </head>
 <body style="overflow: hidden;">
-    <section id="home">
+	<section id="home" class="fr">
 		<img src="{{ url_for('static', filename='assets/vague.png') }}" class="vague1">
 		<header>
 			<a href="/" class="accueil">Accueil</a>
 			{% for i, name in ((0, "easy"), (1, "medium"), (2, "hardcore"), (3, "very hardcore")) %}
 			<a href="/levels/{{i+1}}" class="quiz">Quiz : {{name}} </a>
 			{% endfor %}
+			<div class="horizontalAlign">
+				<span>English</span>
+				<input type="checkbox" class="toggleEnglish" name="englishToggle">
+			</div>
 		</header>
 		<div class="texte_entier" >
 			<h1 class="texteh1_home">SexInfo : La prévention par le jeu<a id="easterBtn">o</a></h1>
@@ -22,6 +27,29 @@
 				Dans le cadre de la Nuit de l'info 2022 qui marque notamment la 34ème journée mondiale de lutte contre le SIDA (tous les 1/12)
 				nous avons réalisé un jeu visant à éduquer les jeunes générations afin de les aider à prendre en main leur sexualité de façon
 				décomplexée et d'ainsi contribuer à la lutte contre les préjugés et les IST. <br><br>Ce projet vous est présenté par les équipes Flying Banana et Kachow.
+			</div>
+		</div>
+
+	</section>
+
+	<section id="home" class="en hidden">
+		<img src="{{ url_for('static', filename='assets/vague.png') }}" class="vague1">
+		<header>
+			<a href="/" class="accueil">Home</a>
+			{% for i, name in ((0, "easy"), (1, "medium"), (2, "hardcore"), (3, "very hardcore")) %}
+			<a href="/levels/{{i+1}}" class="quiz">Quiz : {{name}} </a>
+			{% endfor %}
+			<div class="horizontalAlign">
+				<span>English</span>
+				<input type="checkbox" class="toggleEnglish" name="englishToggle">
+			</div>
+		</header>
+		<div class="texte_entier" >
+			<h1 class="texteh1_home">SexInfo : Prevention through play<a id="easterBtn">o</a></h1>
+			<div class="texteh2-home">
+				As part of the "Nuit de l'info 2022" (Computer science night 2022) which notably marks the 34th World AIDS Day (every 1/12)
+				we have made a game aimed at educating the younger generations in order to help them take charge of their sexuality in
+				an uninhibited way and thus contribute to the fight against prejudice and STDs. <br><br>This project is brought to you by teams "Flying Banana" and "Kachow"
 			</div>
 		</div>
 

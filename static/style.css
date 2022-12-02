@@ -86,12 +86,12 @@ header {
 
 
 
-a {
+* {
     font-style: normal;
     text-decoration: none;
 }
 
-header a {
+header * {
     padding: auto;
     margin: auto;
     margin-left: 2vw;
@@ -101,7 +101,7 @@ header a {
     transition-duration: 250ms;
 }
 
-header a:hover {
+header *:hover {
     color: #f8bcef;
 }
 
@@ -144,9 +144,9 @@ top: -70px;
     z-index: 0;
     width: 100%;
     height: 800px;
-
-
 /* Note: backdrop-filter has minimal browser support */
+}
 
-
+.hidden {
+    display: none;
 }
