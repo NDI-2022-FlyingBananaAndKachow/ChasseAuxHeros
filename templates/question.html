@@ -11,11 +11,11 @@
             <br>
             <fieldset ID="{{  level_id  }}" style="width:30%;">
                 <div class="center">
-                    <legend>Question 2 :</legend>
+                    <legend>Question : {{ question }}</legend>
 	                {% for i in range(4) %}
                     <div>
                         <input type="radio" id="id{{i}}" name="Option {{i}}">
-                        <label for="Option {{i}}">Option {{i+1}}</label>
+                        <label for="Option {{i}}">{{answers[i]}}</label>
                     </div>
 	                {% endfor %}
                 </div>
