@@ -4,8 +4,20 @@
 	<meta charset="UTF-8">
 	<title>Title</title>
 	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+	<link rel="stylesheet" href="{{ url_for('static', filename='level.css') }}"/>
+	<script src="{{url_for('static', filename='script/level.js')}}"></script>
 </head>
 <body>
-
+	<div>
+		<img
+	</div>
+	<div id="levelContainer">
+		<img id="map" src="{{url_for('static', filename='assets/map.png')}}" alt="">
+		<img id="thor" src="{{url_for('static', filename='assets/thor.png')}}" alt="">
+		<img id="captain" src="{{url_for('static', filename='assets/captain.png')}}" alt="">
+		<img id="hulk" src="{{url_for('static', filename='assets/hulk.png')}}" alt="">
+		<img id="ironman" src="{{url_for('static', filename='assets/ironman.png')}}" alt="">
+		<img id="spiderman" src="{{url_for('static', filename='assets/spiderman.png')}}" alt="">
+	</div>
 </body>
 </html>
