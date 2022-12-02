@@ -113,24 +113,49 @@
       "after_answer_message": "Rendez-vous au service des urgences d’un hôpital le plus rapidement possible, de préférence dans les 4 premières heures, au plus tard dans les 48 heures. un traitement post-exposition (TPE) peut empêcher une contamination. À l’accueil, dites que vous venez pour un traitement post-exposition au VIH. Un médecin vous recevra afin d’évaluer le risque. Il prescrira un TPE en cas de risque majeur."
     }
   ],
-  "3": {
-    "q1": "qestion1?",
-    "r1": "reponse1",
-    "q2": "qestion2?",
-    "r2": "reponse2",
-    "q3": "qestion3?",
-    "r3": "reponse3",
-    "q4": "qestion4?",
-    "r4": "reponse4",
-    "q5": "qestion5?",
-    "r5": "reponse5",
-    "q6": "qestion6?",
-    "r6": "reponse6",
-    "q7": "qestion7?",
-    "r7": "reponse7",
-    "q8": "qestion8?",
-    "r8": "reponse8",
-    "q9": "qestion9?",
-    "r9": "reponse9"
-  }
-}
+  "3": [
+    {
+      "question": "C’est quoi le TPE ? ",
+      "answers": [
+        "Un traitement d’urgence au VIH",
+        "Le facteur de transmission du VIH",
+        "Une classification de type d’entreprise",
+        "Un Tourniquet Pour Enfant"
+      ],
+      "correct_answer": 0,
+      "after_answer_message": "Il est impossible de se baser sur des symptômes pour affirmer que quelqu’un a le VIH.\nToutefois, 50 % ou plus des personnes vivant avec le VIH peuvent manifester de légers symptômes semblables à ceux de la grippe, 2 à 4 semaines après avoir été infectées. Les premiers symptômes peuvent comprendre :\n●\tde la \tfièvre \t\n \t\n●\tune \tfatigue \t\n \t\n●\tdes \tfrissons \t\n \t\n●\tun \tmal de gorge \t\n \t\n●\tdes \tmaux de tête \t\n \t\n●\tdes \tdouleurs articulaires \t\n \t\n●\tdes \tdouleurs musculaires \t\n \t\n●\tl'enflure de glandes (ganglions lymphatiques) \t\n\nCe n'est qu'après un test de dépistage du VIH positif qu'on pourra établir si des symptômes sont dûs  à une contamination par le VIH.\n"
+    },
+    {
+      "question": "On peut faire un test pour toutes les IST (Cochez la fausse reponse) ?",
+      "answers": [
+        "Chacune des IST a son propre test de dépistage distinct",
+        "L’infection par le VIH, l'hépatite B et la syphilis peuvent être dépistées ensemble",
+        "Avec une prise de sang",
+        "Les infections à chlamydia, à gonocoque, mycoplasme, trichomonas vaginalis peuvent être recherchées par une analyse d’urines, ou un prélèvement local (anal, pharyngé, vaginal)"
+      ],
+      "correct_answer": 0,
+      "after_answer_message": "Les IST ne peuvent pas toutes être dépistées de la même façon.\nCelles qui peuvent être dépistées par une prise de sang sont : l’infection par le VIH, l’hépatite B et la syphilis.\nCertaines maladies ne seront découvertes que lors d’un examen médical : le médecin observe les lésions et peut faire le diagnostic. Les infections à chlamydia, gonocoque, mycoplasme, trichomonas vaginalis peuvent être recherchées par une analyse d’urines, ou un prélèvement local (anal, pharyngé, vaginal).\nPour les femmes, il est important de bénéficier régulièrement d’un examen gynécologique qui permettra de rechercher des lésions causées par les HPV pouvant être à l’origine de cancers du col de l’utérus.\nSi vous allez consulter un médecin en ville, expliquez-lui les risques auxquels vous pensez avoir été exposé-e, et décrivez-lui les symptômes que vous avez. Il pourra vous proposer des analyses et/ou un traitement adapté.\nLes CeGIDD (Centre Gratuit d’Information, de Dépistage et de Diagnostic) sont habilités à effectuer le dépistag edu VIH mais également des hépatites B et C et des IST.\n"
+    },
+    {
+      "question": "Quelle est la différence entre l’infection par le VIH et le sida  ?",
+      "answers": [
+        "Il n’y a pas de différence",
+        "Le sida est une complication du VIH",
+        "Le sida est une complication du VIH",
+        "Le VIH et le sida sont 2 IST totalement différentes"
+      ],
+      "correct_answer": 1,
+      "after_answer_message": "Le VIH met en général plusieurs années avant d'entamer sérieusement les défenses immunitaires. On ne parle de sida que lorsqu'une personne développe une maladie opportuniste.\nQuand une personne a le sida c'est qu'elle a déjà forcément le VIH. Alors que toutes les personnes infectées par le VIH n'ont pas forcément développé le sida.\n"
+    },
+    {
+      "question": "Que veut dire l’index sur les tests de dépistage ?",
+      "answers": [
+        "Il indique la densité optique des anticorps",
+        "Il indique la probabilité d’être positif",
+        "C’est le numéro de série du test",
+        "C’est un indice de fiabilité du test"
+      ],
+      "correct_answer": 0,
+      "after_answer_message": "\nSur les résultats d'un test de dépistage du VIH, figure souvent un chiffre / index / indice qui n'est pas égal à 0. Il s'agit d'un index purement technique, un indice de densité optique pour être plus précis. Le résultat n'est jamais égal à 0 puisque nous avons tous des anticorps (autres que des anticorps anti-VIH). Il y a donc toujours un \"bruit de fond\".\nSi le résultat est :\n●\tégal \tou supérieur à 1 : le résultat (test ELISA) est positif mais une \t2ème analyse doit être pratiquée sur le même prélèvement \t(Western Blot) ; \t\n \t\n●\tinférieur \tà 0,708 : il est négatif. On n'a donc pas trouvé de trace du VIH \tdans l'analyse ; \t\n \t\n●\tcompris entre 0,708 et 0,999 : \til est dit \"douteux\" (ou équivoque) et doit être \tcontrôlé par une nouvelle sérologie réalisée 1 semaine plus \ttard. \t\n\n"
+    },
+    }
