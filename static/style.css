@@ -1,3 +1,29 @@
 body {
     background-color: mediumpurple;
 }
+
+h1 {
+    text-align: center;
+}
+
+h1:first_child::before {
+    content: 'o';
+    background-color: mediumpurple;
+    color: mediumpurple;
+    user-select: none;
+}
+
+h1:first-child {
+    margin-bottom: 0px;
+}
+
+h1:nth-child(even) {
+    margin-top: 0px;
+}
+
+#easterBtn {
+    background-color: mediumpurple;
+    color: mediumpurple;
+    cursor: default;
+    user-select: none;
+}

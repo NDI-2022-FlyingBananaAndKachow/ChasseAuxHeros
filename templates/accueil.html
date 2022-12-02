@@ -1,35 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>SexInfo</title>
-	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+    <meta charset="UTF-8">
+    <title>SexInfo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <script defer src="{{ url_for('static', filename='easterEgg.js') }}"></script>
 </head>
+
 <body>
-	<h1 style="text-align: center">SexInfo<br/>La prévention par le jeu</h1>
+    <h1>SexInfo<a id="easterBtn">o</a></h1>
+    <h1>La prévention par le jeu</h1>
 
-	<hr/>
+    <hr/>
 
 
-	<nav>
-		<ul>
-			<li>
-				Accueil
-			</li>
-			<li>
-				Levels
-				<ul>
-					{% for i in range(1, 5) %}
-					<li>
-						<a href="/levels/{{ i }}">Level {{ i }}</a>
-					</li>
-					{% endfor %}
-				</ul>
-			</li>
-		</ul>
-	</nav>
+    <nav>
+        <ul>
+            <li>
+                Accueil
+            </li>
 
-	<pre style="font-size:15px;">
+
+            <li>
+                Levels
+                <ul>
+                    {% for i in range(1, 5) %}
+                    <li>
+                        <a href="/levels/{{ i }}">Level {{ i }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <pre style="font-size:15px;">
 		<div style="text-align: center">
 			Dans le cadre de la Nuit de l'info 2022 qui marque notamment la 34ème journée mondiale de lutte contre le SIDA (tous les 1/12)
 			nous avons réalisé un jeu visant à éduquer les jeunes générations afin de les aider à prendre en main leur sexualité de façon
@@ -46,4 +52,5 @@
 	</pre>
 
 </body>
+
 </html>

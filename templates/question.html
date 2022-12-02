@@ -6,6 +6,22 @@
 	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
 </head>
 <body>
-
+	<form method="post" action="/resultat/{{ level_id  }}/{{  question_id  }}">
+        <div class="centered-div">
+            <br>
+            <fieldset ID="{{  level_id  }}" style="width:30%;">
+                <div class="center">
+                    <legend>Question : {{ question }}</legend>
+	                {% for i in range(4) %}
+                    <div>
+                        <input type="radio" id="Option{{i}}" name="Option {{i}}">
+                        <label for="Option{{i}}">{{answers[i]}}</label>
+                    </div>
+	                {% endfor %}
+	                <input type="submit"/>
+                </div>
+            </fieldset>
+        </div>
+    </form>
 </body>
 </html>

@@ -1,14 +1,19 @@
 from flask import Flask, render_template, request, abort, redirect
+import json
 
 from markupsafe import escape
 
 # Contient l'instance du serveur
 app = Flask(__name__, template_folder="templates/", static_folder='static/')
 
+# Charge les données du json
+with open("data.json", "r", encoding="utf-8") as f:
+	data = json.load(f)
+
 
 # Sert à tester si le numéro de map est valide
 is_map_valid = lambda map_id: 0 < map_id < 5
-is_question_valid = lambda question_id: 0 < question_id < 10
+is_question_valid = lambda question_id: 0 <= question_id < 5
 
 
 @app.route('/')
@@ -43,7 +48,20 @@ def question(level_id: int, question_id: int):
 	:param question_id: Prend l'ID de la question (0 à 9).
 	"""
 	if is_map_valid(level_id) and is_question_valid(question_id):
-		return render_template("question.html", level_id=level_id, question_id=question_id)
+		# On récupère la question
+		question = data[str(level_id)][question_id]["question"]
+
+		# On récupère chaque la liste des réponses
+		answers = data[str(level_id)][question_id]["answers"]
+
+		# Fait le rendu du template
+		return render_template(
+			"question.html",
+			level_id=level_id,
+			question_id=question_id,
+			question=question,
+			answers=answers
+		)
 	else:
 		abort(403)
 
@@ -56,7 +74,16 @@ def reponse(level_id: int, question_id: int):
 	:param question_id: Prend l'ID de la question (0 à 5).
 	"""
 	if is_map_valid(level_id) and is_question_valid(question_id):
-		return render_template("reponse.html", level_id=level_id, question_id=question_id)
+		# On récupère le texte après-réponse
+		after_answer_text = data[str(level_id)][question_id]["after_answer_message"]
+
+		# Fait le rendu du template
+		return render_template(
+			"reponse.html",
+			level_id=level_id,
+			question_id=question_id,
+			reponse=after_answer_text
+		)
 	else:
 		abort(403)
 
@@ -65,6 +92,15 @@ def reponse(level_id: int, question_id: int):
 def easter_eggs():
 	return 'FPD'
 
+
+@app.post('/resultat/<int:level_id>/<int:question_id>')
+def resultat(level_id: int, question_id: int):
+	"""
+	Contient et renvoie la réponse à la question demandée.
+	:param level_id: Prend l'ID du niveau (de 1 à 3)
+	:param question_id: Prend l'ID de la question (0 à 9).
+	"""
+	pass
 
 
 if __name__ == '__main__':
