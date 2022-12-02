@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Niveau {{ level_id }}</title>
-	<link rel="stylesheet" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"/>
-	<link rel="stylesheet" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"/>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+	<link rel="stylesheet" href="{{ url_for('static', filename='level.css') }}"/>
 	<script src="{{url_for('static', filename='script/level.js')}}"></script>
 </head>
 <body>
