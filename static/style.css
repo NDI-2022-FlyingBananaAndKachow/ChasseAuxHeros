@@ -43,7 +43,6 @@ body {
     color: #f6f6f6;
     background: linear-gradient(270.11deg, #CA9CC3 -1.82%, #B47FAC 99.9%);
     width: 100%;
-    overflow: hidden;
 
     animation: bg 10s linear infinite;
 }
